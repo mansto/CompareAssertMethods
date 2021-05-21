@@ -1,2 +1,2 @@
 # CompareAssertMethods
-Compares Assert Methods of NUnit, FluentAssertions and default Assert Methods
+Compares Assert Methods of NUnit (Assert. / Assert.That(...)) and FluentAssertions
