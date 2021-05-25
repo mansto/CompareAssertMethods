@@ -1,4 +1,7 @@
-﻿namespace CompareAssertMethods.Mock
+﻿using System;
+using System.Threading;
+
+namespace CompareAssertMethods.Mock
 {
     public class ServiceMock
     {
@@ -7,14 +10,31 @@
             return default;
         }
 
-        internal T GetNotNull<T>() where T : class, new()
+        internal PersonMock GetPerson()
+        {
+            return new PersonMock("Test", "Person", 44);
+        }
+
+        internal PersonMock GetManfred()
+        {
+            return new PersonMock("Manfred", "Stocker", 25);
+        }
+
+        internal PersonMock GetCornelia()
+        {
+            return new PersonMock("Cornelia", "Stocker", 25);
+        }
+
+        internal T GetInstanceOf<T>() where T : new()
         {
             return new T();
         }
 
-        internal PersonMock GetInstance()
+        public void SleepFor500Milliseconds()
         {
-            return new PersonMock("Test", "Person", 44);
+            Thread.Sleep(500);
         }
+
+     
     }
 }

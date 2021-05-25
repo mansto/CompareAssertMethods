@@ -24,5 +24,13 @@ namespace CompareAssertMethods
         public abstract void AreNotSameTests();
 
         public abstract void IsNotEqualTest();
+
+        public abstract void IsAssignableToTest();
+
+        public abstract void IsNotAssignableToTest();
+
+        public abstract void PerfomanceTest();
+
+        public abstract void ExtensionTest();
     }
 }
